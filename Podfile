@@ -3,7 +3,9 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'ReactYogaExample' do
-  
+
+  pod 'YogaKit'
+
   pod 'React', path: './node_modules/react-native', subspecs: [
     'Core',
     'CxxBridge', # Include this for RN >= 0.47

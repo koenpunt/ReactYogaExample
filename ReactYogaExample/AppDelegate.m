@@ -4,6 +4,7 @@
 #import <React/RCTRootView.h>
 
 #import "AppDelegate.h"
+#import "ReactYogaExample-Swift.h"
 
 @interface AppDelegate ()
 
@@ -15,16 +16,12 @@
 
     NSURL* jsLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 
-    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsLocation
-                                                        moduleName:@"ReactYogaExample"
-                                                 initialProperties:nil
-                                                     launchOptions:launchOptions];
-    self.bridge = rootView.bridge;
+    _bridge = [[RCTBridge alloc] initWithBundleURL:jsLocation
+                                    moduleProvider:nil
+                                     launchOptions:launchOptions];
 
-    rootView.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1.00];
+    NativeViewController *rootViewController = [NativeViewController new];
 
-    UIViewController *rootViewController = [UIViewController new];
-    rootViewController.view = rootView;
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _window.rootViewController = rootViewController;
     [_window makeKeyAndVisible];

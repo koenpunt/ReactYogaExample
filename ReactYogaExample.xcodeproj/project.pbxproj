@@ -13,6 +13,7 @@
 		5ED2D4BA212B6D1E009751FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2D4B9212B6D1E009751FF /* Assets.xcassets */; };
 		5ED2D4BD212B6D1E009751FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2D4BB212B6D1E009751FF /* LaunchScreen.storyboard */; };
 		5ED2D4C0212B6D1E009751FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2D4BF212B6D1E009751FF /* main.m */; };
+		5ED2D4E1212C13E7009751FF /* NativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2D4E0212C13E7009751FF /* NativeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		5ED2D4BC212B6D1E009751FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ED2D4BE212B6D1E009751FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED2D4BF212B6D1E009751FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5ED2D4DF212C13E7009751FF /* ReactYogaExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactYogaExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		5ED2D4E0212C13E7009751FF /* NativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeViewController.swift; sourceTree = "<group>"; };
 		6F977D1C661B87378C230097 /* Pods-ReactYogaExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactYogaExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactYogaExample/Pods-ReactYogaExample.release.xcconfig"; sourceTree = "<group>"; };
 		930825CD4722232B9E16DAA2 /* Pods_ReactYogaExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactYogaExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7C7EB0DAE85FB5A9800427 /* Pods-ReactYogaExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactYogaExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactYogaExample/Pods-ReactYogaExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +82,7 @@
 		5ED2D4B3212B6D1C009751FF /* ReactYogaExample */ = {
 			isa = PBXGroup;
 			children = (
+				5ED2D4E0212C13E7009751FF /* NativeViewController.swift */,
 				5ED2D4B4212B6D1C009751FF /* AppDelegate.h */,
 				5ED2D4B5212B6D1C009751FF /* AppDelegate.m */,
 				5ED2D4B7212B6D1C009751FF /* ReactYogaExample-Prefix.pch */,
@@ -86,6 +90,7 @@
 				5ED2D4BB212B6D1E009751FF /* LaunchScreen.storyboard */,
 				5ED2D4BE212B6D1E009751FF /* Info.plist */,
 				5ED2D4BF212B6D1E009751FF /* main.m */,
+				5ED2D4DF212C13E7009751FF /* ReactYogaExample-Bridging-Header.h */,
 			);
 			path = ReactYogaExample;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				TargetAttributes = {
 					5ED2D4B0212B6D1C009751FF = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -169,6 +175,8 @@
 				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
 				"${BUILT_PRODUCTS_DIR}/React/React.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactYoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
 				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -177,6 +185,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ED2D4E1212C13E7009751FF /* NativeViewController.swift in Sources */,
 				5ED2D4C0212B6D1E009751FF /* main.m in Sources */,
 				5ED2D4B6212B6D1C009751FF /* AppDelegate.m in Sources */,
 			);
@@ -283,6 +293,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -334,6 +345,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -343,6 +355,7 @@
 			baseConfigurationReference = 9F7C7EB0DAE85FB5A9800427 /* Pods-ReactYogaExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L3E88L845K;
 				INFOPLIST_FILE = ReactYogaExample/Info.plist;
@@ -352,6 +365,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.koenpunt.ReactYogaExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactYogaExample/ReactYogaExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -361,6 +377,7 @@
 			baseConfigurationReference = 6F977D1C661B87378C230097 /* Pods-ReactYogaExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L3E88L845K;
 				INFOPLIST_FILE = ReactYogaExample/Info.plist;
@@ -370,6 +387,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.koenpunt.ReactYogaExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactYogaExample/ReactYogaExample-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
