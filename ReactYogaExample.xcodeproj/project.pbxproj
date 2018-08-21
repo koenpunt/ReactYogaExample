@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6B41CADAC8DBA925002B1F /* Pods_ReactYogaExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930825CD4722232B9E16DAA2 /* Pods_ReactYogaExample.framework */; };
 		5ED2D4B6212B6D1C009751FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED2D4B5212B6D1C009751FF /* AppDelegate.m */; };
 		5ED2D4B8212B6D1C009751FF /* ReactYogaExample-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2D4B7212B6D1C009751FF /* ReactYogaExample-Prefix.pch */; };
 		5ED2D4BA212B6D1E009751FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ED2D4B9212B6D1E009751FF /* Assets.xcassets */; };
@@ -23,6 +24,9 @@
 		5ED2D4BC212B6D1E009751FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ED2D4BE212B6D1E009751FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ED2D4BF212B6D1E009751FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6F977D1C661B87378C230097 /* Pods-ReactYogaExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactYogaExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactYogaExample/Pods-ReactYogaExample.release.xcconfig"; sourceTree = "<group>"; };
+		930825CD4722232B9E16DAA2 /* Pods_ReactYogaExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactYogaExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F7C7EB0DAE85FB5A9800427 /* Pods-ReactYogaExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactYogaExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactYogaExample/Pods-ReactYogaExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,17 +34,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6B41CADAC8DBA925002B1F /* Pods_ReactYogaExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071F9189EF3D505C81DEE69D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F7C7EB0DAE85FB5A9800427 /* Pods-ReactYogaExample.debug.xcconfig */,
+				6F977D1C661B87378C230097 /* Pods-ReactYogaExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5C0FDA1EF249BF6CFE7B6859 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				930825CD4722232B9E16DAA2 /* Pods_ReactYogaExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5ED2D4A8212B6D1C009751FF = {
 			isa = PBXGroup;
 			children = (
 				5ED2D4B3212B6D1C009751FF /* ReactYogaExample */,
 				5ED2D4B2212B6D1C009751FF /* Products */,
+				071F9189EF3D505C81DEE69D /* Pods */,
+				5C0FDA1EF249BF6CFE7B6859 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,9 +97,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ED2D4C3212B6D1E009751FF /* Build configuration list for PBXNativeTarget "ReactYogaExample" */;
 			buildPhases = (
+				AC7E2BB749DB2FDBC50E07DF /* [CP] Check Pods Manifest.lock */,
 				5ED2D4AD212B6D1C009751FF /* Sources */,
 				5ED2D4AE212B6D1C009751FF /* Frameworks */,
 				5ED2D4AF212B6D1C009751FF /* Resources */,
+				47F498E88F147CA9B31B20C5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +156,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47F498E88F147CA9B31B20C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ReactYogaExample/Pods-ReactYogaExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
+				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
+				"${BUILT_PRODUCTS_DIR}/React/React.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactYoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReactYogaExample/Pods-ReactYogaExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC7E2BB749DB2FDBC50E07DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactYogaExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5ED2D4AD212B6D1C009751FF /* Sources */ = {
@@ -267,6 +340,7 @@
 		};
 		5ED2D4C4212B6D1E009751FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F7C7EB0DAE85FB5A9800427 /* Pods-ReactYogaExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -284,6 +358,7 @@
 		};
 		5ED2D4C5212B6D1E009751FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F977D1C661B87378C230097 /* Pods-ReactYogaExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

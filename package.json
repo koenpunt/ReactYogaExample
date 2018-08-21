@@ -1,0 +1,17 @@
+{
+  "name": "ReactYogaExample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Koen Punt <koen@koenpunt.nl>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "dependencies": {
+    "react": "16.4.1",
+    "react-native": "koenpunt/react-native#yoga-cp-naming-dev"
+  },
+  "devDependencies": {
+    "babel-preset-react-native": "^5"
+  }
+}

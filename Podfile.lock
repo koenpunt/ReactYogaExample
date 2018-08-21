@@ -1,0 +1,79 @@
+PODS:
+  - boost-for-react-native (1.63.0)
+  - DoubleConversion (1.1.5)
+  - Folly (2016.10.31.00):
+    - boost-for-react-native
+    - DoubleConversion
+    - glog
+  - glog (0.3.4)
+  - React/Core (0.56.0):
+    - ReactYoga (= 0.56.0.React)
+  - React/CxxBridge (0.56.0):
+    - Folly (= 2016.10.31.00)
+    - React/Core
+    - React/cxxreact
+  - React/cxxreact (0.56.0):
+    - boost-for-react-native (= 1.63.0)
+    - Folly (= 2016.10.31.00)
+    - React/jschelpers
+    - React/jsinspector
+  - React/DevSupport (0.56.0):
+    - React/Core
+    - React/RCTWebSocket
+  - React/fishhook (0.56.0)
+  - React/jschelpers (0.56.0):
+    - Folly (= 2016.10.31.00)
+    - React/PrivateDatabase
+  - React/jsinspector (0.56.0)
+  - React/PrivateDatabase (0.56.0)
+  - React/RCTBlob (0.56.0):
+    - React/Core
+  - React/RCTNetwork (0.56.0):
+    - React/Core
+  - React/RCTText (0.56.0):
+    - React/Core
+  - React/RCTWebSocket (0.56.0):
+    - React/Core
+    - React/fishhook
+    - React/RCTBlob
+  - ReactYoga (0.56.0.React)
+
+DEPENDENCIES:
+  - DoubleConversion (from `./node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - Folly (from `./node_modules/react-native/third-party-podspecs/Folly.podspec`)
+  - glog (from `./node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - React/Core (from `./node_modules/react-native`)
+  - React/CxxBridge (from `./node_modules/react-native`)
+  - React/DevSupport (from `./node_modules/react-native`)
+  - React/RCTNetwork (from `./node_modules/react-native`)
+  - React/RCTText (from `./node_modules/react-native`)
+  - React/RCTWebSocket (from `./node_modules/react-native`)
+  - ReactYoga (from `./node_modules/react-native/ReactCommon/yoga`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - boost-for-react-native
+
+EXTERNAL SOURCES:
+  DoubleConversion:
+    :podspec: "./node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+  Folly:
+    :podspec: "./node_modules/react-native/third-party-podspecs/Folly.podspec"
+  glog:
+    :podspec: "./node_modules/react-native/third-party-podspecs/glog.podspec"
+  React:
+    :path: "./node_modules/react-native"
+  ReactYoga:
+    :path: "./node_modules/react-native/ReactCommon/yoga"
+
+SPEC CHECKSUMS:
+  boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  DoubleConversion: a9706f16e388b53ff12cca34473428ee29746a26
+  Folly: c89ac2d5c6ab169cd7397ef27485c44f35f742c7
+  glog: b3b0330915eccea41c5cc9731a77cf564a9be5ea
+  React: 20c91830699ad2c62b6f12e6f018719a9fd1c155
+  ReactYoga: 42377681a6ffdaf97cae94663aa67b6124474538
+
+PODFILE CHECKSUM: fef4c8992fc1e7e83e3bc140d0f1b12c5c160c97
+
+COCOAPODS: 1.5.3
